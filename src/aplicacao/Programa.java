@@ -16,12 +16,11 @@ public class Programa {
 
 		List<Usuario> list = new ArrayList<>();
 		try {
-			System.out.println("Quantos Usuarios deseja cadastrar? ");
+			System.out.println("Quantos Alunos deseja cadastrar? ");
 			int n = sc.nextInt();
-			for (int i = 0; i <= n; i++) {
+			for (int i = 1; i <= n; i++) {
 
-				System.out.println("Bem vindo a biblioteca! ");
-				System.out.println("Digite seus dados ->");
+				System.out.println("Digite os dados ->");
 				sc.nextLine();
 				System.out.print("Nome: ");
 				String nome = sc.nextLine();
@@ -31,6 +30,7 @@ public class Programa {
 				sc.nextLine();
 				String curso = sc.nextLine();
 				Usuario usuario = new Usuario(nome, matricula, curso);
+				list.add(usuario);
 				System.out.println("-------------------------------");
 				System.out.println("Quantidade de alugueis se limita a 3 livros por usuario");
 				System.out.println("Quantos livros deseja usar? ");
@@ -38,7 +38,7 @@ public class Programa {
 
 				for (int j = 1; j <= n2; j++) {
 
-					System.out.println("Digite os dados do livro para prosseguir: ");
+					System.out.println("Digite os dados do livro para prosseguir");
 					System.out.println("Titulo do livro: ");
 					sc.nextLine();
 					String titulo = sc.nextLine();

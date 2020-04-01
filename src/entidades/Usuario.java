@@ -56,15 +56,19 @@ public class Usuario {
 	}
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("Dados do Aluno:\n");
+		sb.append("Dados do Aluno -> \n\n");
+		sb.append("Nome do Aluno: ");
 		sb.append(nome + "\n");
+		sb.append("N° Matricula: ");
 		sb.append(matricula +"\n" );
-		sb.append(curso + "\n");
-		sb.append("Livros Escolhidos:\n");
+		sb.append("Curso: ");
+		sb.append(curso + "\n\n");
+		sb.append("Livros Escolhidos ->\n\n");
 		for (Livro l  : livros) {
-			sb.append(l.getTitulo() + "\n");
-			sb.append(l.getIsbn() + "\n");
+			sb.append("Titulo: " + l.getTitulo() + "\n");
+			sb.append("ISBN: " +  l.getIsbn() + "\n\n");
 		}
+		sb.append("\n");
 		return sb.toString();
 	}
 	
